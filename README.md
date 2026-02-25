@@ -1,41 +1,29 @@
 # `obs` — Open Vault CLI
 
-Free, open-source CLI for Obsidian vaults. No Catalyst license needed.
+A community-built, open-source CLI for Obsidian vaults.
 
-[![npm version](https://img.shields.io/npm/v/obsidian-vault-cli)](https://www.npmjs.com/package/obsidian-vault-cli)
+> **Note:** This is an unofficial, community-created project. It is not affiliated with or endorsed by Obsidian.
+
 [![license](https://img.shields.io/npm/l/obsidian-vault-cli)](LICENSE)
 
 ---
 
-## Why this exists
+## What is this?
 
-Obsidian's official CLI (v1.12+) requires a **$25 Catalyst license** (Early Access). Not everyone wants to pay for terminal access to their own notes.
+`obs` is a command-line tool that lets you manage your Obsidian vault from the terminal. It works by reading and writing vault files directly on disk — no running Obsidian instance needed.
 
-`obs` gives you **100+ commands** for free by reading and writing vault files directly on disk. No running Obsidian instance needed. It is designed to complement [kepano/obsidian-skills](https://github.com/kepano/obsidian-skills) for AI agent workflows.
-
----
-
-## How it relates to obsidian-skills
-
-[**obsidian-skills**](https://github.com/kepano/obsidian-skills) is a collection of plain-text instruction files that teach AI agents how to work with Obsidian. It ships five skills:
-
-| Skill | What it does | Requires CLI? |
-|-------|-------------|---------------|
-| `obsidian-markdown` | Read/write Obsidian-flavored Markdown | No — file-based |
-| `obsidian-bases` | Work with Bases (database views) | No — file-based |
-| `json-canvas` | Read/write JSON Canvas files | No — file-based |
-| `defuddle` | Extract readable content from web pages | No — file-based |
-| `obsidian-cli` | Teach AI to use the official paid CLI binary | **Yes — paid CLI** |
-
-Four of the five skills work by reading and writing files directly — no CLI binary needed. The fifth skill (`obsidian-cli`) teaches AI agents to call the official Obsidian CLI, which requires a paid Catalyst license.
-
-**`obs` fills the gap.** It provides the terminal commands that the paid CLI offers, for free. Use obsidian-skills for AI agent integration + `obs` for terminal commands = full Obsidian CLI experience without paying.
+- **100+ commands** for files, search, tags, links, tasks, daily notes, and more
+- **JSON output** for scripting and automation
+- **Auto-detects** your vaults on setup
+- **Works alongside** [kepano/obsidian-skills](https://github.com/kepano/obsidian-skills) for AI agent workflows
 
 ---
 
-## What `obs` can vs can't do
+## How it works
 
-### Can do (file-based operations)
+`obs` reads and writes the same files Obsidian uses — markdown notes, `.canvas` files, `.base` files, and `.obsidian/` configuration. Since it operates on files directly, it handles everything that doesn't require Obsidian's app runtime:
+
+### What `obs` does
 
 - Read, create, search, and manage notes
 - Manage frontmatter properties, tags, links, tasks
@@ -45,17 +33,15 @@ Four of the five skills work by reading and writing files directly — no CLI bi
 - Git sync
 - Full JSON output for scripting
 
-### Can't do (requires a running Obsidian instance)
+### What requires the Obsidian app
 
-These commands exist only in the official paid CLI because they talk to Obsidian's runtime:
+Some operations need to talk to Obsidian's runtime and are outside the scope of a file-based CLI:
 
-| Command | Why it needs the app |
-|---------|---------------------|
-| `eval code="..."` | Execute JS in Obsidian's runtime |
-| `dev:screenshot` | Capture app screenshots |
-| `dev:dom` / `dev:css` | Inspect Obsidian's UI |
-| `plugin:reload` | Hot-reload plugins |
-| Real-time sync | Requires Obsidian's sync engine |
+- Executing JS inside Obsidian (`eval`)
+- Capturing app screenshots
+- Inspecting the Obsidian UI (DOM/CSS)
+- Hot-reloading plugins
+- Real-time sync via Obsidian Sync
 
 ---
 
@@ -306,7 +292,7 @@ obs search content "TODO" --json | jq '[.[].file] | unique'
 
 ## Using with obsidian-skills
 
-Install [obsidian-skills](https://github.com/kepano/obsidian-skills) in your vault for AI agent support, then use `obs` for terminal operations:
+[obsidian-skills](https://github.com/kepano/obsidian-skills) is an official collection of instruction files that teach AI agents how to work with Obsidian files. `obs` pairs well with it — the skills teach agents the correct file formats, and `obs` gives them (and you) a fast way to query and modify the vault from the terminal.
 
 ```bash
 # Install obsidian-skills for AI agent support
@@ -318,8 +304,6 @@ obs search content "meeting notes"
 obs daily create
 obs tags all --json | jq '.[].tag'
 ```
-
-The skills teach AI agents how to read and write Obsidian files. `obs` gives those agents (and you) a fast way to query and modify the vault from the terminal.
 
 ---
 

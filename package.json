@@ -1,7 +1,7 @@
 {
   "name": "obsidian-vault-cli",
   "version": "0.1.0",
-  "description": "Free, open-source CLI for Obsidian vaults — no Catalyst license needed",
+  "description": "Community-built, open-source CLI for Obsidian vaults",
   "type": "module",
   "bin": {
     "obs": "./dist/index.js"
